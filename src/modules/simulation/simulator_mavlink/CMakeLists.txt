@@ -61,6 +61,17 @@ include(sitl_targets_jmavsim.cmake)
 include(sitl_targets_jsbsim.cmake)
 
 
+# none_plane (legacy compatibility launch helper)
+add_custom_target(none_plane
+        COMMAND ${CMAKE_COMMAND} -E env PX4_SYS_AUTOSTART=2100 $<TARGET_FILE:px4>
+        WORKING_DIRECTORY ${SITL_WORKING_DIR}
+        USES_TERMINAL
+        DEPENDS
+                px4
+                ${PX4_SOURCE_DIR}/ROMFS/px4fmu_common/init.d-posix/airframes/2100_none_plane
+        COMMENT "launching px4 none_plane (SYS_AUTOSTART=2100)"
+)
+
 # none_iris (legacy compatibility launch helper)
 add_custom_target(none_iris
 	COMMAND ${CMAKE_COMMAND} -E env PX4_SYS_AUTOSTART=10016 $<TARGET_FILE:px4>
