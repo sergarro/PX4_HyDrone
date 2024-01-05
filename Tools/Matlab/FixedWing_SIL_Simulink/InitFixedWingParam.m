@@ -60,7 +60,7 @@ uavData.ic.gsH = 150;
 
 uavData.cntrl.elevatorGain  = -25*pi/180;
 uavData.cntrl.aieleronGain  = 25*pi/180;
-uavData.cntrl.rudderGain = 25*pi/180;
+uavData.cntrl.rudderGain = -25*pi/180;
 uavData.cntrl.throttleGain  = 100;
 
 uavData.contact.naturalFreq = 20;
