@@ -1,4 +1,24 @@
-# PX4 Drone Autopilot
+# Installing PX4_HyDrone on WSL2 Ubuntu 20.04
+
+1- Open WSL2 Ubuntu 20.04 Terminal
+
+2- Clone github repository: 
+> git clone https://github.com/sergarro/PX4_HyDrone.git --recursive
+
+3- Install Linux dependencies:
+> bash ./PX4_HyDrone/Tools/setup/ubuntu.sh
+
+4- Fetch PX4_HyDrone repository with the original PX4-Autopilot  
+> git remote add upstream https://github.com/PX4/PX4-Autopilot.git
+> git fetch upstream
+> git fetch upstream --tags
+
+5- Define the Windows IP address where Simulink will be executed:
+> export PX4_SIM_HOST_ADDR=192.168.1.54 
+
+6- Compile the Fixed-wing model for SITL:
+> make px4_sitl none_plane
+ 
 
 [![Releases](https://img.shields.io/github/release/PX4/PX4-Autopilot.svg)](https://github.com/PX4/PX4-Autopilot/releases) [![DOI](https://zenodo.org/badge/22634/PX4/PX4-Autopilot.svg)](https://zenodo.org/badge/latestdoi/22634/PX4/PX4-Autopilot)
 
