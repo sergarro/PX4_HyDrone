@@ -10,7 +10,9 @@
 
 4- Fetch PX4_HyDrone repository with the original PX4-Autopilot  
 > git remote add upstream https://github.com/PX4/PX4-Autopilot.git
+
 > git fetch upstream
+
 > git fetch upstream --tags
 
 5- Define the Windows IP address where Simulink will be executed:
