@@ -10,12 +10,12 @@ init.vb = [0 0 0]'; %m/s
 init.euler = [0, 0, pi/3.5]'; %Roll Pitch Yaw Rads
 init.angRates = [0, 0, 0]; %rad/s
 
-%Reference location: Zurich
+%Reference location: Aeroclub RC Valencia (Cheste)
 % This is the home position also
 
-ref_lat = 473977420e-7;
-ref_lon = 85455940e-7;
-ref_height = 488;
+ref_lat = 39.49738807491014;
+ref_lon =  -0.6268122488722822;
+ref_height = 171;
 
 %% UAV Dynamics Data Serialization Constants
 
